@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Choose Date</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="About US">
+	<meta name="keywords" content="About, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link href="{% static 'img/favicon.ico" rel="shortcut icon' %}"/>
+
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/flaticon.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}"/>
+<link href="{% static 'css/login.css' %}" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+
+
+</head>
+<body>
+
+
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<header class="header-section">
+		<a href="index.html" class="site-logo">
+			<img src="{% static 'img/logo.png' %}" alt="">
+		</a>
+		<ul class="main-menu">
+    	<li><a class="active" href="logout">Log Out</a></li>
+
+		</ul>
+	</header>
+	<div class="clearfix"></div>
+
+
+
+	<section class="page-top-section set-bg" data-setbg="{% static 'img/header-bg/1.jpg' %}">
+		<div class="container">
+			<h2>Choose Date and Time</h2>
+		</div>
+	</section>
+
+
+	<section class="about-section">
+		<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="col-lg-5">
+
+				</div>
+			</div>
+      <h1 style="text-align:center">Hello, {{user.first_name}} </h1>
+			<div class="row">
+
+        <div class="login-page">
+          <div class="form">
+
+            <form class="login-form" action="booking" method="post">
+                {% csrf_token %}
+
+                    <label>Choose Date</label>
+                   <input type="date" id="datePickerId" name="date"><br>
+                   <label>Choose Start Time </label>
+                   <input type="time" id="start" value="07:00:00" step="1800" min="06:00" max="21:00" name="stime" >
+                   <label>Choose End Time</label>
+                   <input type="time" id="end" value="08:00:00" step="1800" min="07:00" max="22:00" name="etime">
+                   <input style="background-color: #45a049; color: white;"  type="submit" name="reserve" value="Reserve Slot">
+									 <input type="hidden" name="username" value="{{user.username}}">
+									 <div>
+										{% for message in messages %}
+										<h3>{{message}}</h3>
+										{% endfor %}
+									 </div>
+            </form>
+          </div>
+        </div>
+			</div>
+
+		</div>
+    <div>
+    	{% for message in messages %}
+    	<h3>{{message}}</h3>
+    	{% endfor %}
+    </div>
+	</section>
+
+
+
+
+	<footer class="footer-section set-bg" data-setbg="{% static 'img/footer-bg.jpg' %}">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Location</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/1.png' %}" alt="">
+							<div class="fw-info-text">
+								<p>Edachira , Kochi , Kerala - 682030</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Contact Us</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/2.png' %}" alt="">
+							<div class="fw-info-text">
+								<p>+91 8547879538</p>
+								<p>+91 9408349645</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>E-mail</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/3.png' %}" alt="">
+							<div class="fw-info-text">
+								<p>support@spark.com</p>
+								<p>spark@gmail.com</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Social Media</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/4.png' %}" alt="">
+							<div class="social-links">
+								<a href="#"><i class="fa fa-pinterest"></i></a>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-dribbble"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</footer>
+	<!-- Footer section end -->
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.slicknav.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/circle-progress.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+  <script type="text/javascript">
+    datePickerId.min = new Date().toISOString().split("T")[0];
+  </script>
+  <script type="text/javascript">
+  var start = document.getElementById("start").value;
+  var end = document.getElementById("end").value;
+
+  function diff(start, end) {
+      start = start.split(":");
+      end = end.split(":");
+      var startDate = new Date(0, 0, 0, start[0], start[1], 0);
+      var endDate = new Date(0, 0, 0, end[0], end[1], 0);
+      var diff = endDate.getTime() - startDate.getTime();
+      var hours = Math.floor(diff / 1000 / 60 / 60);
+      diff -= (hours * 1000 * 60 * 60);
+      var minutes = Math.floor(diff / 1000 / 60);
+      var cost = (hours < 9 ? "0" : "") + hours + (minutes < 9 ? "0" : "") + minutes;
+      return cost*9;
+  }
+
+  document.getElementById("diff").value = diff(start, end);
+  </script>
+
+
+	</body>
+</html>

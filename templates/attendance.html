@@ -1,0 +1,372 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Attendance</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="About US">
+	<meta name="keywords" content="About, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}"/>
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}"/>
+	<link rel="stylesheet" href="{% static 'css/flaticon.css'%}"/>
+	<link rel="stylesheet" href="{% static 'css/slicknav.min.css'%}"/>
+
+
+	<link rel="stylesheet" href="{% static 'css/style.css'%}"/>
+
+
+
+</head>
+<body>
+
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<header class="header-section">
+		<a href="index.html" class="site-logo">
+			<img src="{% static 'img/logo.png'%}" alt="">
+		</a>
+		<ul class="main-menu">
+
+
+			<li><a class="active" href="attendance.html">Attendance</a></li>
+			<li><a href="match.html">Match</a></li>
+			<li><a href="lb.html">Leaderboard</a></li>
+				<li><a href="alog.html">Attendance Log</a></li>
+			<li><a href="home.html">Log Out</a></li>
+
+		</ul>
+	</header>
+	<div class="clearfix"></div>
+
+
+
+	<section class="page-top-section set-bg" data-setbg="{% static 'img/header-bg/1.jpg'%}">
+		<div class="container">
+			<h2>Attendance</h2>
+		</div>
+	</section>
+
+
+	<section class="about-section">
+		<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="col-lg-5">
+
+				</div>
+			</div>
+			<div class="about-text">
+					<h1 style="text-align:center">U-10s</h1>
+			</div>
+
+					<div class="about-text">
+<table id="customers" bgcolor="#3B5C33" align="center" width="400px"  style="border-collapse: collapse; text-align:justify;">
+	<tr>
+	<th><b><u>NAME</u></b></th>
+	<th><b><u>ATTENDANCE</u></b></th>
+
+	</tr>
+
+	<tr>
+		<th>Adil Sanjeev</th>
+			<th><form >
+
+    <input type="radio" id="asp" name="as" checked>
+    <label style="color:white;" for="asp">Present</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+
+    <input type="radio" id="asa" name="as">
+    <label style="color:red;" for="asa">Absent</label>
+
+</form></th>
+		</tr>
+
+		<tr>
+			<th>Benny Matthew</th>
+				<th><form>
+
+	    <input type="radio" id="bmp" name="bm" checked>
+	    <label style="color:white;" for = "bmp">Present</label> &nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+	    <input type="radio" id="bma" name="bm">
+	    <label style="color:red;"for = "bma" >Absent</label>
+
+
+	</form></th>
+			</tr>
+
+		</tr>
+
+		<tr>
+			<th>Dinesh Rajan</th>
+				<th><form>
+
+			<input type="radio" id="drp" name="dr" checked>
+			<label style="color:white;" for = "drp">Present</label> &nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+			<input type="radio" id="dra" name="dr">
+			<label style="color:red;"for = "dra" >Absent</label>
+
+
+	</form></th>
+			</tr>
+
+		</tr>
+
+		<tr>
+			<th>Ganesh Karthikeyan</th>
+				<th><form>
+
+			<input type="radio" id="gkp" name="gk" checked>
+			<label style="color:white;" for = "gkp">Present</label> &nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+			<input type="radio" id="gka" name="gk">
+			<label style="color:red;"for = "gka" >Absent</label>
+
+
+	</form></th>
+			</tr>
+
+		</tr>
+
+		<tr>
+			<th>Matthew Koshy</th>
+				<th><form>
+
+			<input type="radio" id="mkp" name="mk" checked>
+			<label style="color:white;" for = "mkp">Present</label> &nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+			<input type="radio" id="mka" name="mk">
+			<label style="color:red;"for = "mka" >Absent</label>
+
+
+	</form></th>
+			</tr>
+
+		</tr>
+
+		<tr>
+			<th>Nivin Lal</th>
+				<th><form>
+
+			<input type="radio" id="nlp" name="nl" checked>
+			<label style="color:white;" for = "nlp">Present</label> &nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+			<input type="radio" id="nla" name="nl">
+			<label style="color:red;"for = "nla" >Absent</label>
+
+
+	</form></th>
+			</tr>
+
+		</tr>
+
+		<tr>
+			<th>Prakashan Nair</th>
+				<th><form>
+
+			<input type="radio" id="pnp" name="pn" checked>
+			<label style="color:white;" for = "pnp">Present</label> &nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+			<input type="radio" id="pna" name="pn">
+			<label style="color:red;"for = "pna" >Absent</label>
+
+
+	</form></th>
+			</tr>
+
+		</tr>
+
+		<tr>
+			<th>Rahul Noel</th>
+				<th><form>
+
+			<input type="radio" id="rnp" name="rn" checked>
+			<label style="color:white;" for = "rnp">Present</label> &nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+			<input type="radio" id="rna" name="rn">
+			<label style="color:red;"for = "rna" >Absent</label>
+
+
+	</form></th>
+			</tr>
+
+		</tr>
+
+		<tr>
+			<th>Sahal Syed</th>
+				<th><form>
+
+			<input type="radio" id="ssp" name="ss" checked>
+			<label style="color:white;" for = "ssp">Present</label> &nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+			<input type="radio" id="ssa" name="ss">
+			<label style="color:red;"for = "ssa" >Absent</label>
+
+
+		</form></th>
+			</tr>
+
+		</tr>
+
+		<tr>
+			<th>Tharan Abraham</th>
+				<th><form>
+
+			<input type="radio" id="tap" name="ta" checked>
+			<label style="color:white;" for = "tap">Present</label> &nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+			<input type="radio" id="taa" name="ta">
+			<label style="color:red;"for = "taa" >Absent</label>
+
+
+	</form></th>
+			</tr>
+
+		</tr>
+
+		<tr>
+			<th>Unni Narayanan</th>
+				<th><form>
+
+			<input type="radio" id="unp" name="un" checked>
+			<label style="color:white;" for = "unp">Present</label> &nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+			<input type="radio" id="una" name="un">
+			<label style="color:red;"for = "una" >Absent</label>
+
+
+	</form></th>
+			</tr>
+
+		</tr>
+
+		<tr>
+			<th>Vignesh Sabu</th>
+				<th><form>
+
+			<input type="radio" id="vsp" name="vs" checked>
+			<label style="color:white;" for = "vsp">Present</label> &nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+			<input type="radio" id="vsa" name="vs">
+			<label style="color:red;"for = "vsa" >Absent</label>
+
+
+	</form></th>
+			</tr>
+
+
+	 </table>
+
+	 	</div>
+
+		</div>
+	</section>
+
+	<section class="about-section">
+		<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="col-lg-5">
+
+				</div>
+			</div>
+
+					<div class="about-text">
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+
+	<footer class="footer-section set-bg" data-setbg="{% static 'img/footer-bg.jpg'%}">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Location</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/1.png'%}" alt="">
+							<div class="fw-info-text">
+								<p>Edachira , Kochi , Kerala - 682030</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Contact Us</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/2.png'%}" alt="">
+							<div class="fw-info-text">
+								<p>+91 8547879538</p>
+								<p>+91 9408349645</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>E-mail</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/3.png'%}" alt="">
+							<div class="fw-info-text">
+								<p>support@spark.com</p>
+								<p>spark@gmail.com</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Social Media</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/4.png'%}" alt="">
+							<div class="social-links">
+								<a href="#"><i class="fa fa-pinterest"></i></a>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-dribbble"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</footer>
+	<!-- Footer section end -->
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
+	<script src="{% static 'js/bootstrap.min.js'%}"></script>
+	<script src="{% static 'js/jquery.slicknav.js'%}"></script>
+	<script src="{% static 'js/owl.carousel.min.js'%}"></script>
+	<script src="{% static 'js/circle-progress.min.js'%}"></script>
+	<script src="{% static 'js/main.js'%}"></script>
+
+	</body>
+</html>

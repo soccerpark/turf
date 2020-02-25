@@ -1,0 +1,53 @@
+.bt {
+  background-color: #127400;
+  border: none;
+  color: white;
+  padding-left:10px ;
+  text-align: center;
+  font-family: cooper black;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+
+  cursor: pointer;
+  box-shadow: 4px 4px 12px 0px  rgba(0,0,0,0.9);
+
+}
+
+div{
+  width: 100%;
+}
+
+.topnav {
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+
+.topnav a {
+  float: left;
+  color: #127400;
+  text-align: center;
+  padding: 14px 0px 14px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 14.28%;
+}
+
+.topnav a:hover {
+  background-color: #127400;
+  color: white;
+}
+.grid {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  width: 100%;
+  }
+
+.grid img {
+  align-items: center;
+  box-shadow: 4px 4px 12px 0px  rgba(0,0,0,0.9);
+  }

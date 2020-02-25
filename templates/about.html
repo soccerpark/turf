@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>About Us</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="About US">
+	<meta name="keywords" content="About, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/flaticon.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}"/>
+
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+
+
+</head>
+<body>
+
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<header class="header-section">
+		<a href="index.html" class="site-logo">
+			<img src="{% static 'img/logo.png' %}" alt="">
+		</a>
+		<ul class="main-menu">
+			<li><a class="active"href="{% url 'home'%}">Home</a></li>
+			<li><a href="{% url 'about'%}">About Us</a></li>
+			<li><a href="accounts/login">Bookings</a></li>
+			<li><a href="{% url 'clogin'%}">Coach</a></li>
+			<li><a href="{% url 'pdp'%}">Player Development Programme</a></li>
+		</ul>
+	</header>
+	<div class="clearfix"></div>
+
+
+
+	<section class="page-top-section set-bg" data-setbg="{% static 'img/header-bg/1.jpg' %}">
+		<div class="container">
+			<h2>About us</h2>
+		</div>
+	</section>
+
+
+	<section class="about-section">
+		<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="col-lg-5">
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="about-text">
+						<p>At SoccerPark, product quality and customer satisfaction are the most important virtues to us. Each SoccerPark location is carefully vetted, analyzed and monitored to ensure optimum player experience. From the parking facility to the service provided by the staff, we ensure our customers leave, only to come back. We use European artificial turf, handcrafted by the finest European Turf manufactures in the world and laid out by the most experienced turf installers in the country.
+
+  </p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="about-text">
+						<p>All our turf comes from FIFA Recommended vendors only. Customer safety is of utmost importance, therefore we take utmost care and make sure all our locations are safe and sound.
+
+Our staff is sure to make you feel comfortable and take care of everything else while you focus on your game. Since everyone deserves a break, feel free to enjoy our beverages on a hot summer day and under a heavily flood lit arena.
+
+Last but not the least, our locations are easy to access and in the center of the city.
+
+Enjoy a game at SoccerPark and feel free to let us know how it was at feedback@soccerpark.com</p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="about-img">
+						<img src="{% static 'img/about-img.png' %}" alt="">
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<!-- Trainers section -->
+	<section class="trainers-section">
+		<div class="container">
+			<div class="section-title text-center">
+				<h2>Meet the <span>Coaches</span></h2>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="trainer-item">
+						<div class="trainer-pic">
+							<img src="{% static 'img/trainers/1.jpg' %}" alt="">
+						</div>
+						<h4>Chacko K T</h4>
+						<p>National Level Player (Defender)</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="trainer-item">
+						<div class="trainer-pic">
+							<img src="{% static 'img/trainers/2.jpg' %}" alt="">
+						</div>
+						<h4>Sahal Abdul</h4>
+						<p>Subroto Cup (2010) - Golden Ball Winner. (Midfielder)</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="trainer-item">
+						<div class="trainer-pic">
+							<img src="{% static 'img/trainers/3.jpg' %}" alt="">
+						</div>
+						<h4>C K Vineeth</h4>
+						<p>AFC License-A coach</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="trainer-item">
+						<div class="trainer-pic">
+							<img src="{% static 'img/trainers/4.jpg' %}" alt="">
+						</div>
+						<h4>Rahul K P</h4>
+						<p>Former United Punjab FC Player</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Trainers section end -->
+
+
+	<!-- Footer section -->
+	<footer class="footer-section set-bg" data-setbg="{% static 'img/footer-bg.jpg ' %}">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Location</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/1.png' %}" alt="">
+							<div class="fw-info-text">
+								<p>Edachira , Kochi , Kerala - 682030</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Contact Us</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/2.png' %}" alt="">
+							<div class="fw-info-text">
+								<p>+91 8547879538</p>
+								<p>+91 9408349645</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>E-mail</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/3.png' %}" alt="">
+							<div class="fw-info-text">
+								<p>support@spark.com</p>
+								<p>spark@gmail.com</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Social Media</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/4.png' %}" alt="">
+							<div class="social-links">
+								<a href="#"><i class="fa fa-pinterest"></i></a>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-dribbble"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</footer>
+	<!-- Footer section end -->
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.slicknav.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/circle-progress.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>

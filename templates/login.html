@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="About US">
+	<meta name="keywords" content="About, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/flaticon.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}"/>
+<link href="{% static 'css/login.css' %}" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+
+
+</head>
+<body>
+
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<header class="header-section">
+		<a href="index.html" class="site-logo">
+			<img src="{% static 'img/logo.png' %}" alt="">
+		</a>
+		<ul class="main-menu">
+      <li><a class="active"href="{% url 'home'%}">Home</a></li>
+			<li><a href="{% url 'about'%}">About Us</a></li>
+			<li><a href="{% url 'login'%}">Bookings</a></li>
+			<li><a href="{% url 'clogin'%}">Coach</a></li>
+			<li><a href="{% url 'pdp'%}">Player Development Programme</a></li>
+
+		</ul>
+	</header>
+
+
+	<section class="page-top-section set-bg" data-setbg="{% static 'img/header-bg/1.jpg' %}">
+		<div class="container">
+			<h2>Login</h2>
+		</div>
+	</section>
+
+	<section>
+		<div class="login-page">
+      <div class="form">
+        <form class="login-form" action="login" method="post">
+            {% csrf_token%}
+            <input type="text" name="username" placeholder="username">
+            <input type="password" name="password" placeholder="password">
+            <input style="background-color: #45a049; color: white;" type="submit" name="login" value="Login">
+            <p class="message">Not registered? <a href="{% url 'register'%}">SignUp</a></p>
+        </form>
+        <div>
+          {% for message in messages %}
+          <h3>{{message}}</h3>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+	</section>
+
+	<!-- Footer section -->
+	<footer class="footer-section set-bg" data-setbg="{% static 'img/footer-bg.jpg' %}">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Location</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/1.png' %}" alt="">
+							<div class="fw-info-text">
+								<p>Edachira , Kochi , Kerala - 682030</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Contact Us</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/2.png' %}" alt="">
+							<div class="fw-info-text">
+								<p>+91 8547879538</p>
+								<p>+91 9408349645</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>E-mail</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/3.png' %}" alt="">
+							<div class="fw-info-text">
+								<p>support@spark.com</p>
+								<p>spark@gmail.com</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget">
+						<h4>Social Media</h4>
+						<div class="fw-info-box">
+							<img src="{% static 'img/icons/4.png' %}" alt="">
+							<div class="social-links">
+								<a href="#"><i class="fa fa-pinterest"></i></a>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-dribbble"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</footer>
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.slicknav.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/circle-progress.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>
